@@ -3,108 +3,52 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0,
-        maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="#78b9e8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Minecraft</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Игровой мир -->
   <canvas id="game"></canvas>
 
-  <!-- Главное меню -->
-  <div id="mainMenu" class="screen">
-    <div class="menu-content">
-
-      <h1 class="game-title">MINECRAFT</h1>
-      <p class="subtitle">МОЙ МИР</p>
-
-      <button id="playBtn" class="menu-button">
-        ИГРАТЬ
-      </button>
-
-      <button id="settingsBtn" class="menu-button">
-        НАСТРОЙКИ
-      </button>
-
-      <p class="version">Minecraft Offline</p>
-
-    </div>
+  <div id="menu" class="screen">
+    <h1>MINECRAFT</h1>
+    <button id="play">ИГРАТЬ</button>
+    <button id="settings">НАСТРОЙКИ</button>
   </div>
 
-  <!-- Настройки -->
   <div id="settingsMenu" class="screen hidden">
     <h2>НАСТРОЙКИ</h2>
-
-    <button id="fullscreenBtn" class="menu-button">
-      ПОЛНЫЙ ЭКРАН
-    </button>
-
-    <button id="backBtn" class="menu-button">
-      НАЗАД
-    </button>
+    <button id="fullscreen">ПОЛНЫЙ ЭКРАН</button>
+    <button id="back">НАЗАД</button>
   </div>
 
-  <!-- Игровой интерфейс -->
-  <div id="gameUI" class="hidden">
-
+  <div id="hud" class="hidden">
     <div id="crosshair">+</div>
+    <button id="pause">Ⅱ</button>
 
-    <button id="pauseBtn">Ⅱ</button>
-
-    <!-- Управление -->
-    <div id="controls">
-
-      <div id="movement">
-        <button id="forwardBtn">▲</button>
-
-        <div class="movement-row">
-          <button id="leftBtn">◀</button>
-          <button id="backwardBtn">▼</button>
-          <button id="rightBtn">▶</button>
-        </div>
+    <div id="movement">
+      <button data-key="forward">▲</button>
+      <div>
+        <button data-key="left">◀</button>
+        <button data-key="back">▼</button>
+        <button data-key="right">▶</button>
       </div>
-
-      <button id="jumpBtn">ПРЫЖОК</button>
-
     </div>
 
-    <!-- Панель блоков -->
+    <div id="actions">
+      <button id="jump">ПРЫЖОК</button>
+      <button id="break">ЛОМАТЬ</button>
+      <button id="place">СТАВИТЬ</button>
+    </div>
+
     <div id="hotbar">
-      <button class="block-slot selected"
-              data-block="grass">🟩</button>
-
-      <button class="block-slot"
-              data-block="dirt">🟫</button>
-
-      <button class="block-slot"
-              data-block="stone">⬜</button>
-
-      <button class="block-slot"
-              data-block="wood">🟤</button>
+      <button data-block="1">🟩</button>
+      <button data-block="2">🟫</button>
+      <button data-block="3">⬜</button>
+      <button data-block="4">🪵</button>
     </div>
-
-  </div>
-
-  <!-- Пауза -->
-  <div id="pauseMenu" class="screen hidden">
-    <h2>ПАУЗА</h2>
-
-    <button id="resumeBtn" class="menu-button">
-      ПРОДОЛЖИТЬ
-    </button>
-
-    <button id="exitBtn" class="menu-button">
-      В ГЛАВНОЕ МЕНЮ
-    </button>
   </div>
 
   <script src="script.js"></script>
-
 </body>
 </html>
