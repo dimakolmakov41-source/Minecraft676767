@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,
+        maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#78b9e8">
+
+  <title>Minecraft</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Игровой мир -->
+  <canvas id="game"></canvas>
+
+  <!-- Главное меню -->
+  <div id="mainMenu" class="screen">
+    <div class="menu-content">
+
+      <h1 class="game-title">MINECRAFT</h1>
+      <p class="subtitle">МОЙ МИР</p>
+
+      <button id="playBtn" class="menu-button">
+        ИГРАТЬ
+      </button>
+
+      <button id="settingsBtn" class="menu-button">
+        НАСТРОЙКИ
+      </button>
+
+      <p class="version">Minecraft Offline</p>
+
+    </div>
+  </div>
+
+  <!-- Настройки -->
+  <div id="settingsMenu" class="screen hidden">
+    <h2>НАСТРОЙКИ</h2>
+
+    <button id="fullscreenBtn" class="menu-button">
+      ПОЛНЫЙ ЭКРАН
+    </button>
+
+    <button id="backBtn" class="menu-button">
+      НАЗАД
+    </button>
+  </div>
+
+  <!-- Игровой интерфейс -->
+  <div id="gameUI" class="hidden">
+
+    <div id="crosshair">+</div>
+
+    <button id="pauseBtn">Ⅱ</button>
+
+    <!-- Управление -->
+    <div id="controls">
+
+      <div id="movement">
+        <button id="forwardBtn">▲</button>
+
+        <div class="movement-row">
+          <button id="leftBtn">◀</button>
+          <button id="backwardBtn">▼</button>
+          <button id="rightBtn">▶</button>
+        </div>
+      </div>
+
+      <button id="jumpBtn">ПРЫЖОК</button>
+
+    </div>
+
+    <!-- Панель блоков -->
+    <div id="hotbar">
+      <button class="block-slot selected"
+              data-block="grass">🟩</button>
+
+      <button class="block-slot"
+              data-block="dirt">🟫</button>
+
+      <button class="block-slot"
+              data-block="stone">⬜</button>
+
+      <button class="block-slot"
+              data-block="wood">🟤</button>
+    </div>
+
+  </div>
+
+  <!-- Пауза -->
+  <div id="pauseMenu" class="screen hidden">
+    <h2>ПАУЗА</h2>
+
+    <button id="resumeBtn" class="menu-button">
+      ПРОДОЛЖИТЬ
+    </button>
+
+    <button id="exitBtn" class="menu-button">
+      В ГЛАВНОЕ МЕНЮ
+    </button>
+  </div>
+
+  <script src="js.script"></script>
+
+</body>
+</html>
